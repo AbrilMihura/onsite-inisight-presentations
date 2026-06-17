@@ -35,7 +35,8 @@ export default function PricingSlide({ section, alt }) {
             }}
           >
             {section.price}
-          </p>
+            <span className="font-display font-semibold" style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', color: '#33B7CF', letterSpacing: '-0.02em' }}>/mo</span>
+</p>
           <p className="text-gray-500 text-lg">{section.priceLabel}</p>
         </div>
 

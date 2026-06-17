@@ -131,7 +131,7 @@ export const content = {
       eyebrow: 'INVESTMENT',
       heading: 'Scope & team',
       price: '$23k',
-      priceLabel: 'Fixed price · July – August 2026',
+      priceLabel: 'Per month · July – August 2026',
     },
   ],
   closing: {
