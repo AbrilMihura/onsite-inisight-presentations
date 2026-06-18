@@ -11,7 +11,7 @@ export const content = {
       label: 'Goals',
       type: 'two-col',
       eyebrow: 'VERSION 3.2',
-      heading: 'Two goals for this version',
+      heading: 'Two goals for these months',
       icon: 'Target',
       left: {
         title: 'Development',
@@ -23,7 +23,7 @@ export const content = {
         ],
       },
       right: {
-        title: 'Research',
+        title: 'Executing pilots',
         icon: 'FlaskConical',
         iconBg: '#046D89',
         items: [
@@ -31,6 +31,22 @@ export const content = {
           'Define what success looks like for workers and supervisors in the field',
         ],
       },
+      timeline: [
+        {
+          period: 'Jun 2026',
+          current: true,
+          rows: [
+            { label: 'Preparing products for pilots', bg: '#CCEDF3', textColor: '#035A71' },
+          ],
+        },
+        {
+          period: 'Jul – Aug 2026',
+          rows: [
+            { label: 'Improve supervisor & worker experience', bg: '#035A71', textColor: '#ffffff', role: 'Development' },
+            { label: 'Executing pilots', bg: '#0584A4', textColor: '#ffffff', role: 'Research' },
+          ],
+        },
+      ],
     },
     {
       id: 'pilot',
@@ -38,9 +54,11 @@ export const content = {
       type: 'three-col',
       eyebrow: 'RESEARCH',
       heading: 'Pilot plan',
+      subtitle: 'Our goal is to support the client throughout the execution of their field pilots.',
       columns: [
         {
           label: 'Before',
+          description: "Set everything up and align on what we're testing, how, and with whom — based on your users.",
           items: [
             { title: 'Technical setup', body: 'What should be pre-defined or pre-built? User creation, company creation, key features in development.' },
             { title: 'Define what we want to test', body: 'Write the hypotheses. Identify which features and flows matter most. Write the questions to ask.' },
@@ -50,6 +68,7 @@ export const content = {
         },
         {
           label: 'During',
+          description: 'Support you through the execution — observe in the field, interview users, and track what happens.',
           items: [
             { title: 'What do you need from our side?', body: 'We want to make sure you have everything you need to run the pilot smoothly.' },
             { title: 'Field observation — recommended', body: 'Have someone present at the site. Take notes and photo register of what happens in real conditions.' },
@@ -58,6 +77,7 @@ export const content = {
         },
         {
           label: 'After',
+          description: 'Analyze everything collected and use it to define the next features or fixes based on what we learned.',
           items: [
             { title: 'Interviews', body: 'Talk to workers and managers to capture their experience and pain points.' },
             { title: 'Analyze collected data', body: 'Resume and process everything gathered during the pilot — notes, metrics, feedback.' },

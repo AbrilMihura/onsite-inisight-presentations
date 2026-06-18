@@ -12,13 +12,18 @@ const EPIC_STYLES = [
 ];
 
 export default function EpicsSlide({ section, alt }) {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openSet, setOpenSet] = useState(new Set());
+  const toggle = (i) => setOpenSet(prev => {
+    const next = new Set(prev);
+    next.has(i) ? next.delete(i) : next.add(i);
+    return next;
+  });
   const bg = alt ? theme.section.altBg : theme.section.bg;
 
   return (
     <section
       id={section.id}
-      className={`min-h-screen ${bg} px-8 md:px-24 py-24 flex flex-col justify-center`}
+      className={`${bg} px-8 md:px-24 py-16 flex flex-col justify-center`}
     >
       {section.eyebrow && <Eyebrow label={section.eyebrow} icon={section.icon} />}
       <h2 className="font-display text-4xl md:text-5xl font-semibold mb-12 max-w-4xl">
@@ -27,13 +32,13 @@ export default function EpicsSlide({ section, alt }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {section.epics.map((epic, i) => {
-          const isOpen = openIndex === i;
+          const isOpen = openSet.has(i);
           const { Icon, bg: iconBg } = EPIC_STYLES[i] || EPIC_STYLES[0];
 
           return (
             <div
               key={i}
-              onClick={() => setOpenIndex(isOpen ? null : i)}
+              onClick={() => toggle(i)}
               className={`rounded-2xl border p-6 cursor-pointer transition-all duration-200 ${
                 isOpen
                   ? 'border-oi-primary bg-oi-pale shadow-md'
