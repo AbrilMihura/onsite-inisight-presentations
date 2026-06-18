@@ -54,7 +54,7 @@ export const content = {
       type: 'three-col',
       eyebrow: 'RESEARCH',
       heading: 'Pilot plan',
-      subtitle: 'Our goal is to support the client throughout the execution of their field pilots.',
+      subtitle: 'Our goal is to support you throughout the execution of your field pilots.',
       columns: [
         {
           label: 'Before',
